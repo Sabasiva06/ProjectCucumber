@@ -29,6 +29,8 @@ public class StepDefinition2 extends LibGobal {
 	@Given("User is on adacitin webpage")
 	public void user_is_on_adacitin_webpage() {
 		WebDriver driver = new ChromeDriver();
+		driver.get("");
+		driver.manage().window().maximize();
 	}
 
 	@When("user used to enter username and password")

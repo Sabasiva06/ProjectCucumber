@@ -8,12 +8,13 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features= {"src\\test\\resources"},glue= {"org.stepdef"},monochrome=true,plugin= {"json:src\\\\test\\\\resources\\\\Report\\\\testreport.json"})
-public class TestRunner  {
+@CucumberOptions(features = { "src\\test\\resources" }, glue = { "org.stepdef" }, monochrome = true, plugin = {
+		"json:src\\\\test\\\\resources\\\\Report\\\\testreport.json" })
+public class TestRunner {
 
 	@AfterClass
 	public static void report() {
-		JVM_Report.generatingReport(System.getProperty("user.dir")+"\\src\\test\\resources\\Report\\testreport.json");
-
+		JVM_Report.generatingReport(System.getProperty("user.dir") + "\\src\\test\\resources\\Report\\testreport.json");
+		System.out.println("hiii java");
 	}
 }
